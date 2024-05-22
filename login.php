@@ -20,7 +20,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
    
     $email = validate($_POST['email']);
 
-    $pass = validate($_POST['password']);
+    $pass =md5(validate($_POST['password']));
 
     if (empty($email)) {
 
